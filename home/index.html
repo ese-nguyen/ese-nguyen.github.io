@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <!-- Head -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html">
+    <title>CV Website</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- jquery -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+
+    <!-- fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
+    <script>
+    $(document).ready(function() {
+      $('a[href*="#"]').each(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+          && location.hostname == this.hostname
+          && this.hash.replace(/#/,'') ) {
+            var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+            var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+            if ($target) {
+             var targetOffset = $target.offset().top;
+             $(this).click(function() {
+                $("#nav li a").removeClass("active");
+                $(this).addClass('active');
+                $('html, body').animate({scrollTop: targetOffset}, 600)
+                return false;
+                });
+            }
+          }
+        });
+
+    });
+    </script>
+  </head>
+
+  <!-- Body -->
+  <body>
+    <!-- Header -->
+    <header id = "header">
+    <div class="content">
+      <div id="logo">
+        <a href="#hello">Hoang Nguyen</a>
+      </div>
+      <nav id="nav">
+        <ul>
+          <li><a href="#hello" class="active" title="My Homepage">WELCOME</a></li>
+          <li><a href="#introduction" title="Introduction">INTRODUCTION</a></li>
+          <li><a href="#objective" title="Objective">OBJECTIVE</a></li>
+          <li><a href="#project" title="Projects">PROJECTS</a></li>
+          <li><a href="#contact" title="Contact Me">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Hello slide -->
+    <div id="hello">
+      <div class="content">
+        <h2>Welcome to my CV website</h2>
+        <h1>I am Hoang Nguyen</h1>
+        <h3>Have a nice day</h3>
+      </div>
+    </div>
+
+    <!-- Introduction Slide -->
+    <div id="introduction">
+      <div class="content">
+        <div class="introduction-container">
+          <p>
+            My name is Ton Quang Hoang Nguyen. I was born in 1997.
+            I am a student at Danang University of Science and Technology.
+            I am interested in programming.
+          </p>
+          <img src="img/mypic.png" alt="This is a picture of me" align ="left"/> <h4 class="namee">This is a small picture of me</h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dreams Slide -->
+    <div id="objective">
+      <div class="content">
+        <h2>Objective</h2>
+        <ul>
+            <li style="font-size:25px; color: greenyellow; font-family: Wellfleet">Expert in Data Science</li>
+            <li style="font-size:25px; color: greenyellow; font-family: Wellfleet">Apply AI, Machine Learning, Deep Learning more in real life.</li>
+            <li style="font-size:25px; color: greenyellow; font-family: Wellfleet">Insprire more people.</li>
+            <li style="font-size:25px; color: greenyellow; font-family: Wellfleet">Be happy.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Projects Slide -->
+    <div id = "project">
+      <div class="content">
+        <h2 style="font-size:35px">Learning projects and projects in embedded systems</h2>
+        <ul>
+          <li style="font-size:25px; color: red; font-family: Wellfleet">Line following robot using Arduino</li>
+          <li style="font-size:25px; color: purple; font-family: Wellfleet">Game using C++/SFML</li>
+          <li style="font-size:25px; color: blue; font-family: Wellfleet">Web using Python/Flask</li>
+          <li style="font-size:25px; color: white; font-family: Wellfleet">Green Challenge Project</li>
+        </ul>
+        <h2 style="font-size:35px">Projects in Machine Learning</h2>
+        <ul>
+          <li style="font-size:25px; color: purple; font-family: Wellfleet">Natural Language Processing/ Chatbot</li>
+          <li style="font-size:25px; color: blue; font-family: Wellfleet">Image Processing</li>
+        </ul>
+        <h2 style="font-size:30px">Read more on my <a href="https://github.com/ese-nguyen">Github</a></h2>
+      </div>
+    </div>
+
+    <div id = "contact">
+      <div class="content">
+        <p style="font-size:25px">
+          You can contact me by following information:<br>
+          Name: Ton Quang Hoang Nguyen<br>
+          Danang University of Science and Technology<br>
+          Embedded Systems<br>
+          Phone Number: 089 89 29 314<br>
+          Email: pmdn.nguyen@gmail.com
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

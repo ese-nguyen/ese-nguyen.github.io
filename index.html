@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Hoang Nguyen</title>
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/background.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/>
+	
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/type-it.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+	<div id="particles-js"></div>
+	<script src="js/particles.min.js"></script>
+	<script src="js/background.js"></script>
+	
+	<!-- Preloader -->
+	<div id="loader-wrapper">
+		<div id="loader"></div>
+
+		<div class="loader-section section-left"></div>
+		<div class="loader-section section-right"></div>
+
+	</div>
+
+	<div class="container">
+		<span class="type-it" style="color:#afe000;"></span>
+	</div>
+
+	<script>
+		var first = "Hello,";
+		var second = "I'm <strong>Hoang Nguyen</strong>.";
+		var third = "Get to know <a href='/home'>me</a>.";
+		var fourth = "<a href='cv'>CV</a> • <a href='https://github.com/ese-nguyen'>GitHub</a> • <a href='https://www.linkedin.com/in/hoangnguyen97/'>LinkedIn</a> • <a href='mailto:pmdn.nguyen@gmail.com'>Email</a>";
+		setTimeout(function(){
+			$('.type-it').typeIt({
+			strings: [first, second, third, fourth]
+			});
+		}, 3500);
+	</script>
+	
+</body>
+</html>
